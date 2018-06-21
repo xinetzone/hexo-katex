@@ -18,7 +18,7 @@ hexo.extend.filter.register('after_post_render', function(data) {
   if ($('.math').length > 0) {
     linkTag = util.htmlTag('link', {
       rel: 'stylesheet',
-      href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css',
+      href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css',
     })
   }
 
