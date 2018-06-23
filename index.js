@@ -18,7 +18,10 @@ hexo.extend.filter.register('after_post_render', function(data) {
   if ($('.math').length > 0) {
     linkTag = util.htmlTag('link', {
       rel: 'stylesheet',
-      href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css',
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css',
+      integrity:
+        'sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH',
+      crossorigin: 'anonymous',
     })
   }
 
