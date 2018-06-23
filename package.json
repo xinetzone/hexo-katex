@@ -1,6 +1,6 @@
 {
   "name": "hexo-katex",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Use KaTeX to display math in Hexo sites.",
   "main": "index",
   "repository": {
