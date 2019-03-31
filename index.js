@@ -18,29 +18,25 @@ hexo.extend.filter.register('after_post_render', function(data) {
   if ($('.math').length > 0) {
     linkTag = util.htmlTag('link', {
       rel: 'stylesheet',
-      href: 'https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css',
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css',
       integrity:
-        'sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH',
+        'sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ',
       crossorigin: 'anonymous',
     })
   }
 
   $('.math.inline').each(function() {
-    // remove unnecessary characters "\\(" and "\)"
     var html = katex.renderToString(
       $(this)
-        .text()
-        .slice(2, -2),
+        .text(),
     )
     $(this).replaceWith(html)
   })
 
   $('.math.display').each(function() {
-    // remove unnecessary characters "\\[" and "\]"
     var html = katex.renderToString(
       $(this)
-        .text()
-        .slice(2, -2),
+        .text(),
       { displayMode: true },
     )
     $(this).replaceWith(html)
