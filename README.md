@@ -24,6 +24,14 @@ katex:
   css: false
 ```
 
+You can define macros like that:
+
+```
+katex:
+  macros:
+    \hash: \mathop\mathrm{hash}
+```
+
 
 ## Writing
 

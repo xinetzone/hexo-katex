@@ -26,19 +26,17 @@ hexo.extend.filter.register('after_post_render', function(data) {
   }
 
   $('.math.inline').each(function() {
-    var html = katex.renderToString(
-      $(this)
-        .text(),
-    )
+    var html = katex.renderToString($(this).text(), {
+      macros: options.macros,
+    })
     $(this).replaceWith(html)
   })
 
   $('.math.display').each(function() {
-    var html = katex.renderToString(
-      $(this)
-        .text(),
-      { displayMode: true },
-    )
+    var html = katex.renderToString($(this).text(), {
+      macros: options.macros,
+      displayMode: true,
+    })
     $(this).replaceWith(html)
   })
 
