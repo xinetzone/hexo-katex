@@ -24,6 +24,13 @@ katex:
   css: false
 ```
 
+When KaTeX encounters an unsupported command, it will abort a rendering process. You can change the behavior by modifing `_config.yml`.
+
+```
+katex:
+  throw_on_error: false
+```
+
 You can define macros like that:
 
 ```

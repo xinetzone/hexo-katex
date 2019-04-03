@@ -27,6 +27,7 @@ hexo.extend.filter.register('after_post_render', function(data) {
 
   $('.math.inline').each(function() {
     var html = katex.renderToString($(this).text(), {
+      throwOnError: options.throw_on_error === undefined || options.throw_on_error,
       macros: options.macros,
     })
     $(this).replaceWith(html)
@@ -34,6 +35,7 @@ hexo.extend.filter.register('after_post_render', function(data) {
 
   $('.math.display').each(function() {
     var html = katex.renderToString($(this).text(), {
+      throwOnError: options.throw_on_error === undefined || options.throw_on_error,
       macros: options.macros,
       displayMode: true,
     })
