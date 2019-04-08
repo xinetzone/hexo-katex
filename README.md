@@ -2,7 +2,7 @@
 
 Use KaTeX to display math in Hexo sites.
 
-## Install 
+## Installing
 
 Install [hexo-renderer-pandoc](https://github.com/wzpan/hexo-renderer-pandoc) and config math engine.
 
