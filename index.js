@@ -6,7 +6,7 @@ var cheerio
 
 hexo.extend.filter.register('after_post_render', function(data) {
   var hexo = this,
-    options = hexo.config.katex
+    options = hexo.config.katex || {}
 
   var content = data.content
   var linkTag = ''
